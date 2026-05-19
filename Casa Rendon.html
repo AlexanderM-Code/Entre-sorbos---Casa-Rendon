@@ -46,53 +46,13 @@
   <span id="toast-msg">Redirigiendo a WhatsApp…</span>
 </div>
 
-<!-- LIGHTBOX -->
-<div id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imagen">
-  <button class="lb-close" id="lb-close" aria-label="Cerrar">
-    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-  </button>
-  <button class="lb-arrow lb-prev" id="lb-prev" aria-label="Anterior">
-    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-  </button>
-  <img id="lb-img" src="" alt="">
-  <button class="lb-arrow lb-next" id="lb-next" aria-label="Siguiente">
-    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-  </button>
-  <div class="lb-counter" id="lb-counter"></div>
-</div>
-
 <!-- FLOATING WHATSAPP -->
 <a class="wa-float" href="https://wa.me/573001234567?text=Hola%20Casa%20Rend%C3%B3n%2C%20me%20interesan%20sus%20productos" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <a href="#inicio" class="nav-logo">
-    <img src="assets/FOTOS%20PAGINA%20WEB/LOGO/logo.png" alt="Casa Rendón">
-    <div class="nav-logo-text"><span class="n1">Entre Sorbos</span><span class="n2">Casa Rendón</span></div>
-  </a>
-  <div class="nav-links">
-    <a href="#historia">Historia</a>
-    <a href="#cafe">Café</a>
-    <a href="#vino">Vino</a>
-    <a href="#galeria">Galería</a>
-    <a href="#visita">Visítanos</a>
-  </div>
-
-  <button class="hbg" id="hbg" aria-label="Menú"><span></span><span></span><span></span></button>
-</nav>
-
-<!-- MOBILE MENU -->
-<div class="mm" id="mm">
-  <button class="mm-x" id="mmx">Cerrar ✕</button>
-  <a href="#historia" class="mml">Historia</a>
-  <a href="#cafe" class="mml">Café</a>
-  <a href="#vino" class="mml">Vino</a>
-  <a href="#galeria" class="mml">Galería</a>
-  <a href="#visita" class="mml">Visítanos</a>
-  <a href="https://wa.me/573001234567" class="mml" target="_blank">WhatsApp</a>
-</div>
+<!-- NAV + MOBILE MENU → React -->
+<div id="react-nav"></div>
 
 <!-- ══════════════════════════════════════════
      ACTO 1 — BIENVENIDA EMOCIONAL
@@ -309,53 +269,8 @@ y un amor que solo da la familia."</p>
     <h2 class="productos-titulo r d1">Nuestros Cafés</h2>
     <p class="productos-desc r d2">Cada variedad es el resultado de generaciones cuidando la tierra. Elige la tuya y siéntela en cada sorbo.</p>
   </div>
-  <div class="products-grid">
-    <div class="prod-card r">
-      <div class="prod-img"><img src="assets/FOTOS%20PAGINA%20WEB/cafe/Foto1.png" alt="Café Altura" loading="lazy"></div>
-      <div class="prod-body">
-        <div class="prod-header">
-          <h3 class="prod-name">Café Altura</h3>        </div>
-        <p class="prod-origin">Buenos Aires, Andes</p>
-        <div class="prod-specs">
-          <span><b>Altitud:</b> 1.850 msnm</span>
-          <span><b>Proceso:</b> Lavado</span>
-          <span><b>Tueste:</b> Medio</span>
-        </div>
-        <p class="prod-notes">Notas de panela, chocolate negro y fruta madura. Un café equilibrado que recoge la esencia de la montaña.</p>
-        <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Caf%C3%A9%20Altura%20de%20Casa%20Rend%C3%B3n" class="prod-cta" target="_blank">Habla conmigo →</a>
-      </div>
-    </div>
-    <div class="prod-card r d2">
-      <div class="prod-img"><img src="assets/FOTOS%20PAGINA%20WEB/cafe/0020.png" alt="Café Especial" loading="lazy"></div>
-      <div class="prod-body">
-        <div class="prod-header">
-          <h3 class="prod-name">Café Especial</h3>        </div>
-        <p class="prod-origin">Buenos Aires, Andes</p>
-        <div class="prod-specs">
-          <span><b>Altitud:</b> 2.000 msnm</span>
-          <span><b>Proceso:</b> Honey</span>
-          <span><b>Tueste:</b> Claro</span>
-        </div>
-        <p class="prod-notes">Notas cítricas, floral y caramelo. Para quienes aprecian lo extraordinario en cada sorbo.</p>
-        <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Caf%C3%A9%20Especial%20de%20Casa%20Rend%C3%B3n" class="prod-cta" target="_blank">Habla conmigo →</a>
-      </div>
-    </div>
-    <div class="prod-card r d4">
-      <div class="prod-img"><img src="assets/FOTOS%20PAGINA%20WEB/cafe/0030.png" alt="Blend Familiar" loading="lazy"></div>
-      <div class="prod-body">
-        <div class="prod-header">
-          <h3 class="prod-name">Blend Familiar</h3>        </div>
-        <p class="prod-origin">Buenos Aires, Andes</p>
-        <div class="prod-specs">
-          <span><b>Altitud:</b> Blend casa Rendon</span>
-          <span><b>Proceso:</b> Mixto</span>
-          <span><b>Tueste:</b> Medio oscuro</span>
-        </div>
-        <p class="prod-notes">La mezcla que lleva 30 años en nuestra mesa. Profundo, equilibrado, con sabor a hogar.</p>
-        <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Blend%20Familiar%20de%20Casa%20Rend%C3%B3n" class="prod-cta" target="_blank">Habla conmigo →</a>
-      </div>
-    </div>
-  </div>
+  <!-- Tarjetas Café → React -->
+  <div id="react-productos-cafe"></div>
 
 </section>
 
@@ -394,59 +309,8 @@ y un amor que solo da la familia."</p>
     </div>
   </div>
 
-  <!-- Productos vino -->
-  <div class="vino-products r" style="margin-top:64px">
-    <div class="vprod-card">
-      <h3 class="vprod-name">Vino de Mora</h3>      <p class="vprod-type">Tinto artesanal · Receta original</p>
-      <div class="vprod-specs">
-        <span><b>Fruta:</b> Moras silvestres</span>
-        <span><b>Fermentación:</b> ~12 meses</span>
-        <span><b>Origen:</b> Buenos Aires, Andes</span>
-      </div>
-      <p class="vprod-desc">La receta que empezó todo. Taninos suaves, color rojo profundo, sabor a fruta silvestre de montaña. El original de nuestra madre.</p>
-      <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Vino%20de%20Mora%20de%20Casa%20Rend%C3%B3n" class="vprod-cta" target="_blank">Habla conmigo →</a>
-    </div>
-    <div class="vprod-card">
-      <h3 class="vprod-name">Vino de Habuticaba</h3>      <p class="vprod-type">Tinto exótico · Edición especial</p>
-      <div class="vprod-specs">
-        <span><b>Fruta:</b> Habuticaba tropical</span>
-        <span><b>Fermentación:</b> Artesanal lenta</span>
-        <span><b>Origen:</b> Buenos Aires, Andes</span>
-      </div>
-      <p class="vprod-desc">Una fruta única que da un vino sin igual. Color morado intenso, aroma frutal, sabor a jabuticaba madura con cuerpo y carácter.</p>
-      <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Vino%20de%20Habuticaba%20de%20Casa%20Rend%C3%B3n" class="vprod-cta" target="_blank">Habla conmigo →</a>
-    </div>
-    <div class="vprod-card">
-      <h3 class="vprod-name">Vino de Uchuva</h3>      <p class="vprod-type">Blanco afrutado · Ligero y fresco</p>
-      <div class="vprod-specs">
-        <span><b>Fruta:</b> Uchuva fresca</span>
-        <span><b>Fermentación:</b> Artesanal</span>
-        <span><b>Origen:</b> Buenos Aires, Andes</span>
-      </div>
-      <p class="vprod-desc">Dorado, vibrante y con acidez perfecta. La uchuva da notas cítricas y tropicales que lo hacen refrescante y distinto a todo.</p>
-      <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Vino%20de%20Uchuva%20de%20Casa%20Rend%C3%B3n" class="vprod-cta" target="_blank">Habla conmigo →</a>
-    </div>
-    <div class="vprod-card">
-      <h3 class="vprod-name">Vino de Pulpa de Café</h3>      <p class="vprod-type">Único en su tipo · Identidad Rendón</p>
-      <div class="vprod-specs">
-        <span><b>Fruta:</b> Pulpa de cerezo de café</span>
-        <span><b>Fermentación:</b> Artesanal</span>
-        <span><b>Origen:</b> Buenos Aires, Andes</span>
-      </div>
-      <p class="vprod-desc">Cuando el café y el vino se encuentran en la misma botella. La pulpa del cerezo da notas suaves de café, caramelo y fruta roja. Solo aquí.</p>
-      <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Vino%20de%20Pulpa%20de%20Caf%C3%A9%20de%20Casa%20Rend%C3%B3n" class="vprod-cta" target="_blank">Habla conmigo →</a>
-    </div>
-    <div class="vprod-card">
-      <h3 class="vprod-name">Vino de Borojo</h3>      <p class="vprod-type">Tinto tropical · Intenso y medicinal</p>
-      <div class="vprod-specs">
-        <span><b>Fruta:</b> Borojó del Pacífico</span>
-        <span><b>Fermentación:</b> Artesanal lenta</span>
-        <span><b>Origen:</b> Buenos Aires, Andes</span>
-      </div>
-      <p class="vprod-desc">El borojo tiene reputación de fruta poderosa. Nuestro vino captura su intensidad en cada sorbo: espeso, profundo, con un dulzor tropical característico.</p>
-      <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Vino%20de%20Borojo%20de%20Casa%20Rend%C3%B3n" class="vprod-cta" target="_blank">Habla conmigo →</a>
-    </div>
-  </div>
+  <!-- Tarjetas Vino → React -->
+  <div id="react-productos-vino"></div>
   <p style="text-align:center;margin-top:32px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:rgba(245,234,212,.4)">Y seguimos experimentando con nuevas frutas. <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20saber%20sobre%20las%20variedades%20de%20temporada" target="_blank" rel="noopener" style="color:#b54060;text-decoration:underline;font-style:italic">Pregúntanos por las variedades de temporada.</a></p>
 
 </section>
@@ -462,94 +326,7 @@ y un amor que solo da la familia."</p>
     <p class="sec-lead r d2" style="text-align:center;margin:0 auto;color:var(--coffee-2)">Imágenes reales de nuestros procesos y nuestros productos. Sin filtros de marketing, solo la verdad de lo que hacemos.</p>
   </div>
 
-  <div class="galeria-grid" id="galGrid">
-    <div class="gal-item r">
-      <img src="assets/FOTOS%20PAGINA%20WEB/HISTORIA/2026-05-01_10-09-28.jpg" alt="El territorio de Buenos Aires, Andes" loading="lazy">
-      <div class="gal-caption">El territorio que nos da todo</div>
-    </div>
-    <div class="gal-item r d1">
-      <img src="assets/FOTOS%20PAGINA%20WEB/AUTENTICIDAD%2CCONFIABILIDAD/Foto7.png" alt="Manos trabajando" loading="lazy">
-      <div class="gal-caption">Las manos detrás de cada sorbo</div>
-    </div>
-    <div class="gal-item r d2">
-      <img src="assets/FOTOS%20PAGINA%20WEB/AUTENTICIDAD%2CCONFIABILIDAD/Foto8.png" alt="Proceso artesanal" loading="lazy">
-      <div class="gal-caption">Proceso artesanal, sin atajos</div>
-    </div>
-    <div class="gal-item r d3">
-      <img src="assets/FOTOS%20PAGINA%20WEB/AUTENTICIDAD%2CCONFIABILIDAD/Foto10.png" alt="El café natural" loading="lazy">
-      <div class="gal-caption">100% natural, directo de la Casa</div>
-    </div>
-    <div class="gal-item r">
-      <img src="assets/FOTOS%20PAGINA%20WEB/AUTENTICIDAD%2CCONFIABILIDAD/Foto14.png" alt="Producto listo" loading="lazy">
-      <div class="gal-caption">Listo para llegar a tus manos</div>
-    </div>
-    <div class="gal-item r d1">
-      <img src="assets/FOTOS%20PAGINA%20WEB/VINO%20Y%20CAFE/Foto13.png" alt="Vino y café juntos" loading="lazy">
-      <div class="gal-caption">Dos productos, una historia</div>
-    </div>
-    <div class="gal-item r d2">
-      <img src="assets/FOTOS%20PAGINA%20WEB/AUTENTICIDAD%2CCONFIABILIDAD/Foto16.png" alt="Calidad artesanal" loading="lazy">
-      <div class="gal-caption">Calidad que se ve y se prueba</div>
-    </div>
-    <div class="gal-item r d3">
-      <img src="assets/FOTOS%20PAGINA%20WEB/HISTORIA/Foto9.png" alt="Proceso auténtico" loading="lazy">
-      <div class="gal-caption">Sin químicos, sin apuros</div>
-    </div>
-    <div class="gal-item r">
-      <img src="assets/FOTOS%20PAGINA%20WEB/AUTENTICIDAD%2CCONFIABILIDAD/0060.png" alt="El empaque artesanal" loading="lazy">
-      <div class="gal-caption">Empacado con amor</div>
-    </div>
-    <div class="gal-item r d1">
-      <img src="assets/FOTOS%20PAGINA%20WEB/VINO%20Y%20CAFE/Foto15.png" alt="Vino y café" loading="lazy">
-      <div class="gal-caption">Del fruto a tu mesa</div>
-    </div>
-    <div class="gal-item r d2">
-      <img src="assets/FOTOS%20PAGINA%20WEB/AUTENTICIDAD%2CCONFIABILIDAD/Foto3.png" alt="Café tostado" loading="lazy">
-      <div class="gal-caption">Café tostado y molido</div>
-    </div>
-    <div class="gal-item r d3">
-      <img src="assets/FOTOS%20PAGINA%20WEB/HISTORIA/2026-05-011_09-33-03.jpg" alt="Historia de la finca" loading="lazy">
-      <div class="gal-caption">La historia en cada imagen</div>
-    </div>
-    <!-- Fotos ocultas — se revelan con "Ver más" -->
-    <div class="gal-item hidden">
-      <img src="assets/FOTOS%20PAGINA%20WEB/VINO%20Y%20CAFE/0040.png" alt="Productos Casa Rendón" loading="lazy">
-      <div class="gal-caption">Directo del productor</div>
-    </div>
-    <div class="gal-item hidden">
-      <img src="assets/FOTOS%20PAGINA%20WEB/AUTENTICIDAD%2CCONFIABILIDAD/Taza.jpg" alt="Taza de café Casa Rendón" loading="lazy">
-      <div class="gal-caption">Una taza, una historia</div>
-    </div>
-    <div class="gal-item hidden">
-      <img src="assets/FOTOS%20PAGINA%20WEB/AUTENTICIDAD%2CCONFIABILIDAD/Foto6.png" alt="Café de altura" loading="lazy">
-      <div class="gal-caption">Café de altura, sabor único</div>
-    </div>
-    <div class="gal-item hidden">
-      <img src="assets/FOTOS%20PAGINA%20WEB/AUTENTICIDAD%2CCONFIABILIDAD/Proceso1.jpg" alt="El proceso del café" loading="lazy">
-      <div class="gal-caption">Cada etapa, con dedicación</div>
-    </div>
-    <div class="gal-item hidden">
-      <img src="assets/FOTOS%20PAGINA%20WEB/AUTENTICIDAD%2CCONFIABILIDAD/Foto31.png" alt="Artesanal desde el inicio" loading="lazy">
-      <div class="gal-caption">Artesanal desde el inicio</div>
-    </div>
-    <div class="gal-item hidden">
-      <img src="assets/FOTOS%20PAGINA%20WEB/VINO%20Y%20CAFE/007.png" alt="Café y vino artesanal" loading="lazy">
-      <div class="gal-caption">Café y vino, nuestra firma</div>
-    </div>
-    <div class="gal-item hidden">
-      <img src="assets/FOTOS%20PAGINA%20WEB/AUTENTICIDAD%2CCONFIABILIDAD/autenticidad.png" alt="Autenticidad Casa Rendón" loading="lazy">
-      <div class="gal-caption">Autenticidad en cada detalle</div>
-    </div>
-    <div class="gal-item hidden">
-      <img src="assets/FOTOS%20PAGINA%20WEB/HISTORIA/2026-05-01_16-23-58.jpg" alt="En la finca" loading="lazy">
-      <div class="gal-caption">Buenos Aires, Antioquia</div>
-    </div>
-  </div>
-  <div class="load-wrap">
-    <button class="load-btn" id="galLoadMore" onclick="loadMore('galGrid','galLoadMore')">
-      Ver más fotos <span class="load-count">(8 más)</span>
-    </button>
-  </div>
+  <div id="react-galeria"></div>
 </section>
 
 <!-- ══════════════════════════════════════════
@@ -606,23 +383,7 @@ y un amor que solo da la familia."</p>
     <p class="sec-label label r center" style="color:var(--terra)">Lo que dicen</p>
     <h2 class="sec-h2 r d1" style="color:var(--coffee);text-align:center"><em>La experiencia de quienes </em>ya probaron.</em></h2>
   </div>
-  <div class="test-grid">
-    <div class="test-card r">
-      <div class="test-stars">★★★★★</div>
-      <p class="test-quote">"El café de Casa Rendón tiene un sabor que no había encontrado en ninguna tienda. Se nota que lo hicieron con amor y conocimiento. Volvería a comprar mil veces."</p>
-      <p class="test-author">María C. · Medellín</p>
-    </div>
-    <div class="test-card r d2">
-      <div class="test-stars">★★★★★</div>
-      <p class="test-quote">"El vino de moras es increíble. Tiene un sabor muy especial, diferente a todo lo que he probado. Me contaron la historia de cómo lo hacen y eso lo hace aún más especial."</p>
-      <p class="test-author">Andrés M. · Bogotá</p>
-    </div>
-    <div class="test-card r d4">
-      <div class="test-stars">★★★★★</div>
-      <p class="test-quote">"Visité Casa Rendon y fue una experiencia hermosa. Nicolás nos mostró todo el proceso con mucho orgullo. El café que nos dieron ahí era el mejor que he tomado en mi vida."</p>
-      <p class="test-author">Claudia R. · Manizales</p>
-    </div>
-  </div>
+  <div id="react-testimonios"></div>
 </section>
 
 <!-- ══════════════════════════════════════════
@@ -705,57 +466,7 @@ y un amor que solo da la familia."</p>
       </div>
       <p class="faq-head-hint r d2">Si tienes otra duda, escríbenos por WhatsApp y te respondemos con gusto.</p>
     </div>
-  <div class="faq-list">
-
-    <div class="faq-item r">
-      <button class="faq-q">
-        ¿Hacen envíos a todo Colombia?
-        <span class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-      </button>
-      <div class="faq-a"><div class="faq-a-inner">Sí. Enviamos café y vino a todo el país a través de transportadoras nacionales. El tiempo de entrega es de <b>3 a 6 días hábiles</b> dependiendo de tu ciudad. El costo de envío se coordina directamente por WhatsApp según destino y peso del pedido.</div></div>
-    </div>
-
-    <div class="faq-item r d1">
-      <button class="faq-q">
-        ¿Cómo hago un pedido?
-        <span class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-      </button>
-      <div class="faq-a"><div class="faq-a-inner">Escríbenos directamente por <b>WhatsApp</b>. Te atendemos personalmente, te explicamos las opciones disponibles, acordamos cantidades y coordinamos el envío. Sin formularios complicados — como debe ser.</div></div>
-    </div>
-
-    <div class="faq-item r d2">
-      <button class="faq-q">
-        ¿Cuánto tiempo duran los productos?
-        <span class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-      </button>
-      <div class="faq-a"><div class="faq-a-inner">El <b>café tostado</b> se conserva en óptimas condiciones hasta 6 meses sellado y en lugar fresco, seco y alejado de la luz. El <b>vino artesanal</b> se mantiene bien entre 12 y 18 meses. Una vez abierto, consume en los primeros días para disfrutar mejor sus notas.</div></div>
-    </div>
-
-    <div class="faq-item r d3">
-      <button class="faq-q">
-        ¿Qué incluye la visita a Casa Rendón?
-        <span class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-      </button>
-      <div class="faq-a"><div class="faq-a-inner">La visita incluye <b>cata de café de altura</b>, <b>cata de vino artesanal</b>, recorrido por el cafetal y degustación de los productos de la finca. La experiencia tiene una duración aproximada de 3 horas y el cupo es de 2 a 8 personas. Disponible viernes, sábados y domingos con reserva previa.</div></div>
-    </div>
-
-    <div class="faq-item r d4">
-      <button class="faq-q">
-        ¿Puedo ir cualquier día de la semana?
-        <span class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-      </button>
-      <div class="faq-a"><div class="faq-a-inner">Las visitas están disponibles <b>viernes, sábados y domingos</b> con reserva previa. Para grupos o fechas especiales en días de semana, escríbenos y lo coordinamos. El cupo es limitado para garantizar una atención personalizada.</div></div>
-    </div>
-
-    <div class="faq-item r d5">
-      <button class="faq-q">
-        ¿Dónde está ubicada la finca exactamente?
-        <span class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-      </button>
-      <div class="faq-a"><div class="faq-a-inner">Estamos en la <b>Vereda Buenos Aires, a 12 km del casco urbano de Andes, Antioquia</b>. Al confirmar tu reserva te enviamos las coordenadas exactas y una nota de voz de Don Rendón con las instrucciones para llegar. El camino hace parte de la experiencia.</div></div>
-    </div>
-
-  </div>
+  <div id="react-faq"></div>
   </div>
 </section>
 
@@ -1008,7 +719,11 @@ y un amor que solo da la familia."</p>
   </div>
 </footer>
 
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script src="script.js"></script>
+<script type="text/babel" src="react-components.jsx"></script>
 </body>
 </html>
 
