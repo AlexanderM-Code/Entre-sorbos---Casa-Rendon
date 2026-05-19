@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($content = Get-Content \"C:\\\\Users\\\\Alexander\\\\.claude\\\\projects\\\\c--Users-Alexander-Downloads-CASA-RENDON\\\\08bb5e69-8e56-4674-948a-d5194a7af2bc.jsonl\" -Raw; $lines = $content -split \"`n\"; Write-Host \"Total lines: $\\($lines.Count\\)\"; $lines | Select-Object -Last 5 | ForEach-Object { $_.Substring\\(0, [Math]::Min\\(300, $_.Length\\)\\) })",
+      "PowerShell(\\(Get-Content \"c:\\\\Users\\\\Alexander\\\\Downloads\\\\CASA RENDON\\\\Casa Rendon.html\"\\).Count)"
+    ]
+  }
+}
