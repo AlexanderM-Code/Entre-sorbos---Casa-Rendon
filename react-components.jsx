@@ -48,19 +48,19 @@ const CAFE_PRODUCTS = [
     img: 'assets/FOTOS%20PAGINA%20WEB/cafe/Foto1.png', name: 'Café Altura', origin: 'Buenos Aires, Andes',
     specs: [{ k: 'Altitud', v: '1.850 msnm' }, { k: 'Proceso', v: 'Lavado' }, { k: 'Tueste', v: 'Medio' }],
     notes: 'Notas de panela, chocolate negro y fruta madura. Un café equilibrado que recoge la esencia de la montaña.',
-    wa: 'https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Caf%C3%A9%20Altura%20de%20Casa%20Rend%C3%B3n',
+    wa: 'https://wa.me/573002972172?text=Hola%2C%20quiero%20el%20Caf%C3%A9%20Altura%20de%20Casa%20Rend%C3%B3n',
   },
   {
     img: 'assets/FOTOS%20PAGINA%20WEB/cafe/0020.png', name: 'Café Especial', origin: 'Buenos Aires, Andes',
     specs: [{ k: 'Altitud', v: '2.000 msnm' }, { k: 'Proceso', v: 'Honey' }, { k: 'Tueste', v: 'Claro' }],
     notes: 'Notas cítricas, floral y caramelo. Para quienes aprecian lo extraordinario en cada sorbo.',
-    wa: 'https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Caf%C3%A9%20Especial%20de%20Casa%20Rend%C3%B3n',
+    wa: 'https://wa.me/573002972172?text=Hola%2C%20quiero%20el%20Caf%C3%A9%20Especial%20de%20Casa%20Rend%C3%B3n',
   },
   {
     img: 'assets/FOTOS%20PAGINA%20WEB/cafe/0030.png', name: 'Blend Familiar', origin: 'Buenos Aires, Andes',
     specs: [{ k: 'Altitud', v: 'Blend Casa Rendón' }, { k: 'Proceso', v: 'Mixto' }, { k: 'Tueste', v: 'Medio oscuro' }],
     notes: 'La mezcla que lleva 30 años en nuestra mesa. Profundo, equilibrado, con sabor a hogar.',
-    wa: 'https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Blend%20Familiar%20de%20Casa%20Rend%C3%B3n',
+    wa: 'https://wa.me/573002972172?text=Hola%2C%20quiero%20el%20Blend%20Familiar%20de%20Casa%20Rend%C3%B3n',
   },
 ];
 
@@ -69,31 +69,31 @@ const VINO_PRODUCTS = [
     name: 'Vino de Mora', type: 'Tinto artesanal · Receta original',
     specs: [{ k: 'Fruta', v: 'Moras silvestres' }, { k: 'Fermentación', v: '~12 meses' }, { k: 'Origen', v: 'Buenos Aires, Andes' }],
     desc: 'La receta que empezó todo. Taninos suaves, color rojo profundo, sabor a fruta silvestre de montaña. El original de nuestra madre.',
-    wa: 'https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Vino%20de%20Mora%20de%20Casa%20Rend%C3%B3n',
+    wa: 'https://wa.me/573002972172?text=Hola%2C%20quiero%20el%20Vino%20de%20Mora%20de%20Casa%20Rend%C3%B3n',
   },
   {
     name: 'Vino de Habuticaba', type: 'Tinto exótico · Edición especial',
     specs: [{ k: 'Fruta', v: 'Habuticaba tropical' }, { k: 'Fermentación', v: 'Artesanal lenta' }, { k: 'Origen', v: 'Buenos Aires, Andes' }],
     desc: 'Una fruta única que da un vino sin igual. Color morado intenso, aroma frutal, sabor a jabuticaba madura con cuerpo y carácter.',
-    wa: 'https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Vino%20de%20Habuticaba%20de%20Casa%20Rend%C3%B3n',
+    wa: 'https://wa.me/573002972172?text=Hola%2C%20quiero%20el%20Vino%20de%20Habuticaba%20de%20Casa%20Rend%C3%B3n',
   },
   {
     name: 'Vino de Uchuva', type: 'Blanco afrutado · Ligero y fresco',
     specs: [{ k: 'Fruta', v: 'Uchuva fresca' }, { k: 'Fermentación', v: 'Artesanal' }, { k: 'Origen', v: 'Buenos Aires, Andes' }],
     desc: 'Dorado, vibrante y con acidez perfecta. La uchuva da notas cítricas y tropicales que lo hacen refrescante y distinto a todo.',
-    wa: 'https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Vino%20de%20Uchuva%20de%20Casa%20Rend%C3%B3n',
+    wa: 'https://wa.me/573002972172?text=Hola%2C%20quiero%20el%20Vino%20de%20Uchuva%20de%20Casa%20Rend%C3%B3n',
   },
   {
     name: 'Vino de Pulpa de Café', type: 'Único en su tipo · Identidad Rendón',
     specs: [{ k: 'Fruta', v: 'Pulpa de cerezo de café' }, { k: 'Fermentación', v: 'Artesanal' }, { k: 'Origen', v: 'Buenos Aires, Andes' }],
     desc: 'Cuando el café y el vino se encuentran en la misma botella. La pulpa del cerezo da notas suaves de café, caramelo y fruta roja. Solo aquí.',
-    wa: 'https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Vino%20de%20Pulpa%20de%20Caf%C3%A9%20de%20Casa%20Rend%C3%B3n',
+    wa: 'https://wa.me/573002972172?text=Hola%2C%20quiero%20el%20Vino%20de%20Pulpa%20de%20Caf%C3%A9%20de%20Casa%20Rend%C3%B3n',
   },
   {
     name: 'Vino de Borojo', type: 'Tinto tropical · Intenso y medicinal',
     specs: [{ k: 'Fruta', v: 'Borojó del Pacífico' }, { k: 'Fermentación', v: 'Artesanal lenta' }, { k: 'Origen', v: 'Buenos Aires, Andes' }],
     desc: 'El borojo tiene reputación de fruta poderosa. Nuestro vino captura su intensidad en cada sorbo: espeso, profundo, con un dulzor tropical característico.',
-    wa: 'https://wa.me/573001234567?text=Hola%2C%20quiero%20el%20Vino%20de%20Borojo%20de%20Casa%20Rend%C3%B3n',
+    wa: 'https://wa.me/573002972172?text=Hola%2C%20quiero%20el%20Vino%20de%20Borojo%20de%20Casa%20Rend%C3%B3n',
   },
 ];
 
@@ -270,7 +270,7 @@ function NavApp() {
         {NAV_LINKS.map(l => (
           <a key={l.href} href={l.href} className="mml" onClick={e => handleLink(e, l.href)}>{l.label}</a>
         ))}
-        <a href="https://wa.me/573001234567" className="mml" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://wa.me/573002972172" className="mml" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </>
   );

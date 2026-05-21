@@ -131,7 +131,7 @@ function submitReview(e) {
   const checked = document.querySelector('input[name="rev-stars"]:checked');
   const stars   = checked ? '★'.repeat(+checked.value) + '☆'.repeat(5 - +checked.value) : '★★★★★';
   const text = `Hola Casa Rendón, quiero dejar mi reseña:\n\n${stars}\n${product ? '📦 ' + product + '\n' : ''}\n"${msg}"\n\n— ${name}${city ? ' · ' + city : ''}`;
-  window.open('https://wa.me/573001234567?text=' + encodeURIComponent(text), '_blank');
+  window.open('https://wa.me/573002972172?text=' + encodeURIComponent(text), '_blank');
   showToast('Gracias por tu reseña — redirigiendo a WhatsApp');
 }
 
@@ -146,7 +146,7 @@ function enviarReserva(e) {
   const personas = document.getElementById('f-personas').value;
   const msg      = document.getElementById('f-msg').value;
   const texto = `Hola Casa Rendón, quiero reservar una visita.\n\nNombre: ${nombre}\nCiudad: ${ciudad || 'No especificada'}\nFecha: ${fecha || 'A coordinar'}\nPersonas: ${personas || 'No especificado'}\nMensaje: ${msg || 'Ninguno'}`;
-  window.open(`https://wa.me/573001234567?text=${encodeURIComponent(texto)}`, '_blank');
+  window.open(`https://wa.me/573002972172?text=${encodeURIComponent(texto)}`, '_blank');
   showToast('Redirigiendo a WhatsApp… ¡Hasta pronto!');
 }
 
