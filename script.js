@@ -317,3 +317,151 @@ function showToast(msg, duration) {
     });
   });
 })();
+
+// ── FOTOS STACK HISTORIA: slideshow cada 5 segundos ──
+(function(){
+  var stack = document.querySelector('.fotos-stack');
+  if (!stack) return;
+  var cards = Array.from(stack.querySelectorAll('.foto-card'));
+  if (cards.length < 2) return;
+
+  var current = 0;
+
+  function showCard(idx) {
+    cards.forEach(function(card) {
+      card.classList.remove('foto-featured', 'foto-bg');
+      card.classList.add('foto-bg');
+    });
+    cards[idx].classList.remove('foto-bg');
+    cards[idx].classList.add('foto-featured');
+  }
+
+  showCard(current);
+
+  setInterval(function() {
+    current = (current + 1) % cards.length;
+    showCard(current);
+  }, 5000);
+})();
+
+// ══════════════════════════════════════════
+//  LIGHTBOX — visor de fotos Historia
+// ══════════════════════════════════════════
+(function () {
+  var lb      = document.getElementById('foto-lightbox');
+  var lbImg   = document.getElementById('lb-img');
+  var lbCap   = document.getElementById('lb-caption');
+  var lbClose = document.getElementById('lb-close');
+  if (!lb) return;
+
+  function openLightbox(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt;
+    lbCap.textContent = alt || '';
+    lb.classList.add('lb-open');
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  }
+  window.openLightbox = openLightbox;
+
+  function closeLightbox() {
+    lb.classList.remove('lb-open');
+    document.body.style.overflow = '';
+    // pequeño delay para que la animacion de salida se vea
+    setTimeout(function () { lbImg.src = ''; }, 350);
+  }
+
+  // Clic en cualquier foto-card abre el lightbox
+  document.querySelectorAll('.foto-card').forEach(function (card) {
+    card.addEventListener('click', function () {
+      var img = card.querySelector('img');
+      if (!img) return;
+      openLightbox(img.src, img.alt);
+    });
+  });
+
+  // Clic en imágenes de la galería de vino (.vino-gallery .bi)
+  document.querySelectorAll('.vino-gallery .bi').forEach(function (bi) {
+    bi.style.cursor = 'zoom-in';
+    bi.addEventListener('click', function () {
+      var img = bi.querySelector('img');
+      if (!img) return;
+      openLightbox(img.src, img.alt);
+    });
+  });
+
+  // Cerrar con el botón X
+  lbClose.addEventListener('click', function (e) {
+    e.stopPropagation();
+    closeLightbox();
+  });
+
+  // Cerrar al tocar el fondo oscuro (fuera de la imagen)
+  lb.addEventListener('click', function (e) {
+    if (!e.target.closest('.lb-img-wrap')) closeLightbox();
+  });
+
+  // Cerrar con Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lb.classList.contains('lb-open')) closeLightbox();
+  });
+})();
+
+// ── Lightbox universal: todas las imágenes de contenido restantes ──
+(function () {
+  function attachLb(el, getSrc) {
+    if (!el || el.dataset.lbDone) return;
+    el.dataset.lbDone = '1';
+    el.style.cursor = 'zoom-in';
+    el.addEventListener('click', function () {
+      if (!window.openLightbox) return;
+      var r = getSrc();
+      if (r) window.openLightbox(r.src, r.alt);
+    });
+  }
+
+  // Imagen grande intro café
+  var cafeIntroImg = document.querySelector('.cafe-intro-img img');
+  if (cafeIntroImg) attachLb(cafeIntroImg, function () { return { src: cafeIntroImg.src, alt: cafeIntroImg.alt }; });
+
+  // Imagen grande intro vino
+  var vinoIntroImg = document.querySelector('.vino-intro-img img');
+  if (vinoIntroImg) attachLb(vinoIntroImg, function () { return { src: vinoIntroImg.src, alt: vinoIntroImg.alt }; });
+
+  // Proceso café: cada panel abre la slide visible en ese momento
+  document.querySelectorAll('.cp-item').forEach(function (item) {
+    item.dataset.lbDone = '1';
+    item.style.cursor = 'zoom-in';
+    item.addEventListener('click', function () {
+      if (!window.openLightbox) return;
+      var active = item.querySelector('.cp-slide-active img') || item.querySelector('img');
+      if (active) window.openLightbox(active.src, active.alt);
+    });
+  });
+
+  // Imagen de la sección Visítanos
+  var visitaImg = document.querySelector('.visita-right img');
+  if (visitaImg) attachLb(visitaImg, function () { return { src: visitaImg.src, alt: visitaImg.alt }; });
+
+  // Fotos flotantes sección Impacto
+  document.querySelectorAll('.impacto-foto img').forEach(function (img) {
+    attachLb(img, function () { return { src: img.src, alt: img.alt }; });
+  });
+
+  // MutationObserver: captura imágenes que React renderice después del load
+  // (catálogo de café .prod-img ya tiene onClick en React, galería tiene su propio lightbox)
+  var observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (m) {
+      m.addedNodes.forEach(function (node) {
+        if (node.nodeType !== 1) return;
+        var imgs = node.tagName === 'IMG' ? [node] : Array.from(node.querySelectorAll('img'));
+        imgs.forEach(function (img) {
+          // Excluir logos, preloader, lightbox interno y galería (tiene su propio)
+          if (img.closest('#preloader, .nav-logo, .wa-float, .footer-brand, #foto-lightbox, .gal-item, .foto-card, .vino-gallery, .prod-img')) return;
+          attachLb(img, function () { return { src: img.src, alt: img.alt }; });
+        });
+      });
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+})();

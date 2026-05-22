@@ -95,6 +95,12 @@ const VINO_PRODUCTS = [
     desc: 'El borojo tiene reputación de fruta poderosa. Nuestro vino captura su intensidad en cada sorbo: espeso, profundo, con un dulzor tropical característico.',
     wa: 'https://wa.me/573002972172?text=Hola%2C%20quiero%20el%20Vino%20de%20Borojo%20de%20Casa%20Rend%C3%B3n',
   },
+  {
+    name: 'Vino de Uva Isabella', type: 'Tinto semidulce · Uva nativa andina',
+    specs: [{ k: 'Fruta', v: 'Uva Isabella de montaña' }, { k: 'Fermentación', v: 'Artesanal lenta' }, { k: 'Origen', v: 'Buenos Aires, Andes' }],
+    desc: 'La uva más querida de nuestras montañas. Aroma a fruta madura y notas florales, con un dulzor suave y equilibrado que lo hace perfecto para compartir en familia.',
+    wa: 'https://wa.me/573002972172?text=Hola%2C%20quiero%20el%20Vino%20de%20Uva%20Isabella%20de%20Casa%20Rend%C3%B3n',
+  },
 ];
 
 const TESTIMONIALS = [
@@ -388,7 +394,11 @@ function ProductosCafeApp() {
     <div className="products-grid">
       {CAFE_PRODUCTS.map((p, i) => (
         <div key={p.name} className={`prod-card r${i === 1 ? ' d2' : i === 2 ? ' d4' : ''}`}>
-          <div className="prod-img">
+          <div
+            className="prod-img"
+            style={{ cursor: 'zoom-in' }}
+            onClick={() => window.openLightbox && window.openLightbox(p.img, p.name)}
+          >
             <img src={p.img} alt={p.name} loading="lazy" />
           </div>
           <div className="prod-body">
