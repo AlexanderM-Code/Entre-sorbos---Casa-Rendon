@@ -11,6 +11,17 @@ Sitio web de **Casa Rendón**, una marca familiar de café de altura y vino arte
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![React](https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 
+<table>
+  <tr>
+    <td width="72%"><img src="docs/capturas/escritorio.webp" alt="Casa Rendón en escritorio" /></td>
+    <td width="28%"><img src="docs/capturas/movil.webp" alt="Casa Rendón en celular" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>casarendon.com en escritorio</sub></td>
+    <td align="center"><sub>En celular</sub></td>
+  </tr>
+</table>
+
 ---
 
 ## Secciones del sitio
